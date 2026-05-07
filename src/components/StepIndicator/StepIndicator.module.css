@@ -1,0 +1,104 @@
+.root {
+  background: var(--bg-card);
+  border: 1px solid var(--border-1);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  position: sticky;
+  top: calc(var(--nav-height) + var(--space-4));
+}
+
+.progressLabel {
+  font-size: var(--fs-label);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-label);
+  color: var(--fg-4);
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--space-3);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0;
+}
+
+.item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  position: relative;
+  padding-bottom: 18px;
+}
+
+.item:last-child {
+  padding-bottom: 0;
+}
+
+.connector {
+  position: absolute;
+  inset-inline-start: 13px;
+  top: 28px;
+  bottom: 0;
+  width: 2px;
+  background: var(--border-1);
+  border-radius: 1px;
+}
+
+.item.done .connector {
+  background: var(--sais-gold);
+}
+
+.bullet {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  color: var(--fg-4);
+  border: 1px solid var(--border-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-label);
+  font-weight: var(--fw-semibold);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.item.done .bullet {
+  background: var(--sais-gold);
+  color: var(--sais-white);
+  border: none;
+}
+
+.item.current .bullet {
+  background: var(--sais-navy);
+  color: var(--sais-white);
+  border: none;
+}
+
+.content {
+  padding-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stepLabel {
+  font-size: 13.5px;
+  font-weight: var(--fw-semibold);
+  color: var(--fg-4);
+}
+
+.item.done .stepLabel,
+.item.current .stepLabel {
+  color: var(--fg-1);
+}
+
+.stepLabelAr {
+  font-family: var(--font-arabic);
+  font-size: var(--fs-label);
+  color: var(--fg-4);
+}

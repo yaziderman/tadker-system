@@ -1,0 +1,137 @@
+/* SAIS Design System — tokens.css
+   Supreme Authority for Industrial Security · Kingdom of Saudi Arabia
+   Source: SAIS Application Design Guidelines v1.0, May 2026
+   Import once at your application root. */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@400;500;700&display=swap');
+
+:root {
+  /* PRIMARY PALETTE */
+  --sais-navy:        #0A3161;
+  --sais-royal-blue:  #1A4A82;
+  --sais-gold:        #C6A026;
+  --sais-white:       #FFFFFF;
+
+  /* SECONDARY PALETTE */
+  --sais-surface:     #F5F6F8;
+  --sais-blue-tint:   #E8EDF3;
+  --sais-success:     #1E7E34;
+  --sais-alert:       #C0392B;
+
+  /* BADGE FILLS */
+  --sais-badge-success-bg: #EAF7ED;
+  --sais-badge-success-fg: #1E7E34;
+  --sais-badge-review-bg:  #F5ECD0;
+  --sais-badge-review-fg:  #8A6E14;
+  --sais-badge-error-bg:   #FDECEA;
+  --sais-badge-error-fg:   #C0392B;
+  --sais-badge-new-bg:     #E8EDF3;
+  --sais-badge-new-fg:     #0A3161;
+
+  /* SEMANTIC FOREGROUND */
+  --fg-1:  #0A3161;
+  --fg-2:  #1B2A3E;
+  --fg-3:  #4A5567;
+  --fg-4:  #6B7585;
+  --fg-on-navy:       #FFFFFF;
+  --fg-on-navy-muted: rgba(255, 255, 255, 0.78);
+
+  /* BACKGROUNDS */
+  --bg-page:    #F5F6F8;
+  --bg-card:    #FFFFFF;
+  --bg-tint:    #E8EDF3;
+  --bg-navy:    #0A3161;
+
+  /* BORDERS */
+  --border-1:     #E1E5EC;
+  --border-2:     #C9D1DC;
+  --border-input: #C9D1DC;
+  --border-focus: #C6A026;
+
+  /* GRADIENTS */
+  --gradient-hero: linear-gradient(135deg, #0A3161 0%, #1A4A82 100%);
+
+  /* TYPOGRAPHY — FAMILIES */
+  --font-arabic:    "IBM Plex Sans Arabic", "Noto Kufi Arabic", system-ui, sans-serif;
+  --font-latin:     "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+
+  /* TYPE SCALE */
+  --fs-h1:    36px;
+  --fs-h2:    26px;
+  --fs-h3:    18px;
+  --fs-body:  15px;
+  --fs-small: 13px;
+  --fs-label: 12px;
+
+  /* TYPE WEIGHTS */
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+
+  /* LINE HEIGHTS */
+  --lh-display:    1.2;
+  --lh-body:       1.65;
+  --lh-arabic-add: 1.13;
+
+  /* LETTER-SPACING */
+  --tracking-label: 0.08em;
+  --tracking-tight: -0.005em;
+
+  /* SPACING */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 48px;
+  --space-6: 80px;
+
+  /* RADII */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-pill: 999px;
+
+  /* ELEVATION */
+  --shadow-sm:  0 1px 2px rgba(10, 49, 97, 0.06);
+  --shadow-md:  0 4px 12px rgba(10, 49, 97, 0.08);
+  --shadow-lg:  0 12px 28px rgba(10, 49, 97, 0.12);
+  --shadow-nav: 0 1px 0 rgba(10, 49, 97, 0.06), 0 2px 8px rgba(10, 49, 97, 0.04);
+
+  /* LAYOUT */
+  --container-max: 1280px;
+  --nav-height: 64px;
+  --gutter: 24px;
+
+  /* MOTION */
+  --ease-standard:  cubic-bezier(0.2, 0, 0, 1);
+  --duration-fast:  150ms;
+  --duration-base:  220ms;
+}
+
+html {
+  font-family: var(--font-latin);
+  color: var(--fg-2);
+  background: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html[lang="ar"],
+html[dir="rtl"],
+[lang="ar"] {
+  font-family: var(--font-arabic);
+  line-height: calc(var(--lh-body) * var(--lh-arabic-add));
+}
+
+body {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  margin: 0;
+}
+
+:where(button, a, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--sais-gold);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
